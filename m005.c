@@ -25,9 +25,16 @@
 
 /* Return the determinant of a 3x3 integer matrix.*/
 
-int determinant (int m[3][3])
+int determinant (int a[3][3])
 {
-  return 0;
+    int r, s, d;
+
+    s = a[0][0]*a[1][1]*a[2][2] + a[0][1]*a[1][2]*a[2][0] + a[0][2]*a[1][0]*a[2][1];
+    d = a[0][2]*a[1][1]*a[2][0] + a[0][1]*a[1][0]*a[2][2] + a[0][0]*a[1][2]*a[2][1];
+
+    r = s - d;
+
+    return r;
 }
 
 
@@ -38,16 +45,16 @@ int main (int argc, char **argv)
 {
   int a[3][3];
   int det;
-  
+
   /* Read matrix lines. */
-  
+
   scanf ("%d %d %d", &a[0][0], &a[0][1], &a[0][2]);
   scanf ("%d %d %d", &a[1][0], &a[1][1], &a[1][2]);
   scanf ("%d %d %d", &a[2][0], &a[2][1], &a[2][2]);
 
   det = determinant (a);
-  
+
   printf ("%d\n", det);
-  
+
   return 0;
 }

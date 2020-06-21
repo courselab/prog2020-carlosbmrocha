@@ -34,17 +34,21 @@ int lettercount (char *s)
     t = 0;
     while (s[i] != 0 )
     {
-        if (s[i] == ' ')
+        if ((s[i] >= 65) && (s[i] <= 90) )
         {
+            t++;
             i++;
         }
         else
-        {
+         if ((s[i] >= 97) && (s[i] <= 122))
+         {
+             t++;
+             i++;
+         }
+         else
             i++;
-            t++;
-        }
     }
-    return t - 1;
+    return t ;
 }
 
 

@@ -40,7 +40,7 @@ void sort (int* vector, int n)
                 t = j;
         }
         b[i] = a[t];
-        a[t] = 0;
+        a[t] = -32767;
     }
     for(i = 0; i < n; i++)
         vector[i] =  b[n- 1 - i];

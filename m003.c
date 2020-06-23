@@ -23,7 +23,8 @@
 
 int is_prime (int a)
 {
-  int i;
+
+   int i;
    float t;
    if (a > 2)
    {
@@ -34,16 +35,20 @@ int is_prime (int a)
           break;
     }
    }
-  if (a == 1)
-    return 1;
-  else
-    if (a == 2)
-    return 1;
+    if (a == 1)
+    return 0;
     else
-        if ( t == 0)
-            return 0;
+        if (a == 2)
+        return 1;
         else
-            return 1;
+            if ( a == 0)
+            return 0;
+            else
+                if ( t == 0)
+                return 0;
+                else
+                    return 1;
+
 
 }
 

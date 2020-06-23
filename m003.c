@@ -1,12 +1,12 @@
 /* m003.c - Check if a positive integer is prime.
 
-   This program takes a non-zero positive integer read as a 
+   This program takes a non-zero positive integer read as a
    command line argument and outputs 1 or 0 depending on
    whether the number is prime or not.
 
    E.g.
 
-      command line    : m003 5 
+      command line    : m003 5
       expected output : 1
 
    Directions:
@@ -35,7 +35,7 @@ int is_prime (int a)
     }
    }
   if (a == 1)
-    return 0;
+    return 1;
   else
     if (a == 2)
     return 1;
@@ -61,10 +61,10 @@ int main (int argc, char **argv)
       exit(1);
     }
 
-  
+
   n = atoi (argv[1]);
 
   printf("%d\n", is_prime (n));
-  
+
   return 0;
 }

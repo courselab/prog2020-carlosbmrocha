@@ -54,11 +54,12 @@ void lastname (char *c)
         }
 
     b[n - x - 2]= ','; //acrecenta ','
-    b[n - x - 1]= ' '; //da um espaço
+    b[n - x - 1]= ' '; //da um espaÃ§o
 
     for (j= 0; j < x; j++) //passa o restoda palavra para a variavel intermediaria
-     b[n - x + j]=a[j];
-
+    {
+       b[n - x + j]=a[j];
+    }
      b[n] = 0; // finaliza a palavra
 
 

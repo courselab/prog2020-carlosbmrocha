@@ -40,18 +40,18 @@ void lastname (char *c)
 
     i = 0;
     while ( a[i] != 0)
-    {
+        {
         if (a[i] == ' ')
             x = i;
         i++;
-    }
+        }
     for (j = x + 1; j < n ; j++)
-    {
+        {
         if ( (a[j] <=122) && (a[j] >= 97) )
             b[j - x - 1]= a[j] - 32;
-            else
+        else
             b[j - x - 1] = a[j];
-    }
+        }
 
     b[n - x - 2]= ',';
     b[n - x - 1]= ' ';

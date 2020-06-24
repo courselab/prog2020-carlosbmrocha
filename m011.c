@@ -38,14 +38,17 @@ int wordcount (char *filename)
 
     while ( fgets(a , 150, fp) != NULL )
      {
+       if(a[0] != '\n')
+       {
          k = strlen(a);
          for(i=0; i < k ; i++)
          {
              if (a[i] == 32)
                 n++;
-
          }
+
          n++;
+       }
      }
      fclose(fp);
 

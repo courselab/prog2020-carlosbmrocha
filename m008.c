@@ -53,13 +53,13 @@ void lastname (char *c)
             b[j - x - 1] = a[j];
     }
 
-    b[n - x - 1]= ',';
-    b[n - x ]= ' ';
+    b[n - x - 2]= ',';
+    b[n - x - 1]= ' ';
 
     for (j= 0; j < x; j++)
-     b[n - x + 1 + j]=a[j];
+     b[n - x + j]=a[j];
 
-     b[n + 1 ] = 0;
+     b[n] = 0;
 
 
     strcpy(c,b);

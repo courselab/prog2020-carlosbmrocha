@@ -39,13 +39,13 @@ void lastname (char *c)
     n = strlen(a);
 
     i = 0;
-    while ( a[i] != 0)
+    while ( a[i] != 0)   // enclontra o inicio da utima palavra
         {
         if (a[i] == ' ')
             x = i;
         i++;
         }
-    for (j = x + 1; j < n ; j++)
+    for (j = x + 1; j < n ; j++)  //passa a ultima palavra para o inicio da variavel intemediaria em caixa alta
         {
         if ( (a[j] <=122) && (a[j] >= 97) )
             b[j - x - 1]= a[j] - 32;
@@ -53,16 +53,16 @@ void lastname (char *c)
             b[j - x - 1] = a[j];
         }
 
-    b[n - x - 2]= ',';
-    b[n - x - 1]= ' ';
+    b[n - x - 2]= ','; //acrecenta ','
+    b[n - x - 1]= ' '; //da um espaço
 
-    for (j= 0; j < x; j++)
+    for (j= 0; j < x; j++) //passa o restoda palavra para a variavel intermediaria
      b[n - x + j]=a[j];
 
-     b[n] = 0;
+     b[n] = 0; // finaliza a palavra
 
 
-    strcpy(c,b);
+    strcpy(c,b); // copia b para c
 
 }
 

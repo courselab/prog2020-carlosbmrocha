@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define MAX 256
 
@@ -28,7 +29,26 @@
 
 int lettercount (char *s)
 {
-  return 0;
+    int i,n,t;
+    i = 0;
+    t = 0;
+    while (s[i] != 0 )
+    {
+        if ((s[i] >= 65) && (s[i] <= 90) )
+        {
+            t++;
+            i++;
+        }
+        else
+         if ((s[i] >= 97) && (s[i] <= 122))
+         {
+             t++;
+             i++;
+         }
+         else
+            i++;
+    }
+    return t ;
 }
 
 
@@ -41,10 +61,10 @@ int main (int argc, char **argv)
   char name[MAX];
 
   fgets (name, MAX-1, stdin);
-  
+
   n = lettercount (name);
 
   printf ("%d\n", n);
-  
+
   return 0;
 }

@@ -25,8 +25,57 @@
 
 /* Sort three integers x, y, z in ascending order.*/
 
+int maior(int a,int b,int c)
+{
+    if((a >= b) && (a >= c))
+       return a;
+    else
+        if ((b >= a) && (b >= c))
+        return b;
+        else
+        return c;
+
+}
+
+int menor(int a,int b,int c)
+{
+    if((a <= b) && (a <= c))
+       return a;
+    else
+        if ((b <= a) && (b <= c))
+        return b;
+        else
+        return c;
+
+}
+int meio(int a,int b,int c)
+{
+    if((a <= b) && (a >= c))
+       return a;
+    else
+        if ((a <= c) && (a >= b))
+            return a;
+            else
+             if ((b <= a) && (b >= c))
+            return b;
+            else
+            if ((b <= c) && (b >= a))
+            return b;
+            else
+            return c;
+}
+
 void sort (int *a, int *b, int *c)
 {
+    int t, w, z;
+    t = maior(*a,*b,*c);
+    w = meio(*a,*b,*c);
+    z = menor(*a,*b,*c);
+
+    *a = z;
+    *b = w;
+    *c = t;
+
 }
 
 /* Do not edit this function. */
